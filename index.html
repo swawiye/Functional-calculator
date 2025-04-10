@@ -13,33 +13,33 @@
             <tr class="bg-gray-400">
                 <td colspan="4"><input class="dcalc-screen" type="text" id="result" disabled/></td>
             </tr>
-            <!-- Calc screen -->
+            <!-- Calc col 1-->
             <tr>
-                <td>1</td>
-                <td>4</td>
-                <td>7</td>
-                <td>0</td>
+                <td><input type="button" value="1" onclick="display('1')"/></td> <!-- 'display()' function displays the value of clicked button -->
+                <td><input type="button" value="1" onclick="display('4')"/></td>
+                <td><input type="button" value="1" onclick="display('7')"/></td>
+                <td><input type="button" value="1" onclick="display('0')"/></td>
             </tr>
-            <!-- Calc screen -->
+            <!-- Calc col 2 -->
             <tr>
-                <td>2</td>
-                <td>5</td>
-                <td>8</td>
-                <td>=</td>
+                <td><input type="button" value="1" onclick="display('2')"/></td>     
+                <td><input type="button" value="1" onclick="display('5')"/></td>
+                <td><input type="button" value="1" onclick="display('8')"/></td>
+                <td><input type="button" value="=" onclick="calculate()" id="calculateBtn"/></td>
             </tr>
-            <!-- Calc screen -->
-            <tr>                
-                <td>3</td>
-                <td>6</td>
-                <td>9</td>
+            <!-- Calc col 3 -->
+            <tr>  
+                <td><input type="button" value="1" onclick="display('3')"/></td>     
+                <td><input type="button" value="1" onclick="display('6')"/></td>
+                <td><input type="button" value="1" onclick="display('9')"/></td>            
                 <td><input type="button" value="C" onclick="clearScreen()" id="clearBtn"/></td>
             </tr>
-            <!-- Calc screen -->
+            <!-- Calc col 4 -->
             <tr>                
-                <td>+</td>
-                <td>-</td>
-                <td>x</td>
-                <td>/</td>
+                <td><input type="button" value="+" onclick="display('+')" /></td>
+                <td><input type="button" value="-" onclick="display('-')" /></td>
+                <td><input type="button" value="*" onclick="display('*')" /></td>
+                <td><input type="button" value="/" onclick="display('/')" /></td>
             </tr>
         </table>
     </div>
