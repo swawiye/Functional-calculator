@@ -6,43 +6,44 @@
     <title>Functional Calculator</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-gray-200">
-    <div class="bg-black p-20 w-200">
-        <table class="calc">
+<body class="bg-white">
+    <div class="bg-black">
+        <table id="calculator" class="p-10 rounded-md w-200 h-64">
             <!-- Calc screen -->
-            <tr class="bg-gray-400">
-                <td colspan="4"><input class="dcalc-screen" type="text" id="result" disabled/></td>
-            </tr>
-            <!-- Calc col 1-->
             <tr>
-                <td><input type="button" value="1" onclick="display('1')"/></td> <!-- 'display()' function displays the value of clicked button -->
-                <td><input type="button" value="1" onclick="display('4')"/></td>
-                <td><input type="button" value="1" onclick="display('7')"/></td>
-                <td><input type="button" value="1" onclick="display('0')"/></td>
+                <td colspan="5"><input class="bg-gray-200 text-black rounded-md w-100 h-20" type="text" id="calc-screen" disabled/></td>
             </tr>
-            <!-- Calc col 2 -->
+            <!-- Calc row 1 ,'display()' function displays the value of clicked button -->
             <tr>
-                <td><input type="button" value="1" onclick="display('2')"/></td>     
-                <td><input type="button" value="1" onclick="display('5')"/></td>
-                <td><input type="button" value="1" onclick="display('8')"/></td>
-                <td><input type="button" value="=" onclick="calculate()" id="calculateBtn"/></td>
+                <td><input type="button" value="1" onclick="display('1')" class="bg-orange-300 w-10 h-10 rounded-full"/></td>
+                <td><input type="button" value="2" onclick="display('2')" class="bg-orange-300 w-10 h-10 rounded-full"/></td>
+                <td><input type="button" value="3" onclick="display('3')" class="bg-orange-300 w-10 h-10 rounded-full"/></td> 
+                <td><input type="button" value="+" onclick="display('+')" class="bg-gray-400 w-10 h-10 rounded-full"/></td>
             </tr>
-            <!-- Calc col 3 -->
-            <tr>  
-                <td><input type="button" value="1" onclick="display('3')"/></td>     
-                <td><input type="button" value="1" onclick="display('6')"/></td>
-                <td><input type="button" value="1" onclick="display('9')"/></td>            
-                <td><input type="button" value="C" onclick="clearScreen()" id="clearBtn"/></td>
+            <!-- Calc row 2 -->
+            <tr>
+                <td><input type="button" value="4" onclick="display('4')" class="bg-orange-300 w-10 h-10 rounded-full"/></td>     
+                <td><input type="button" value="5" onclick="display('5')" class="bg-orange-300 w-10 h-10 rounded-full"/></td>
+                <td><input type="button" value="6" onclick="display('6')" class="bg-orange-300 w-10 h-10 rounded-full"/></td>
+                <td><input type="button" value="-" onclick="display('-')" class="bg-gray-400 w-10 h-10 rounded-full"/></td>>
             </tr>
-            <!-- Calc col 4 -->
-            <tr>                
-                <td><input type="button" value="+" onclick="display('+')" /></td>
-                <td><input type="button" value="-" onclick="display('-')" /></td>
-                <td><input type="button" value="*" onclick="display('*')" /></td>
-                <td><input type="button" value="/" onclick="display('/')" /></td>
+            <!-- Calc row 3 -->
+            <tr>
+                <td><input type="button" value="7" onclick="display('7')" class="bg-orange-300 w-10 h-10 rounded-full"/></td>
+                <td><input type="button" value="8" onclick="display('8')" class="bg-orange-300 w-10 h-10 rounded-full"/></td>
+                <td><input type="button" value="9" onclick="display('9')" class="bg-orange-300 w-10 h-10 rounded-full"/></td>
+                <td><input type="button" value="*" onclick="display('*')" class="bg-gray-400 w-10 h-10 rounded-full"/></td>  
+            </tr>
+            <!-- Calc row 4 -->
+            <tr>
+                <td><input type="button" value="0" onclick="display('0')" class="bg-orange-300 w-10 h-10 rounded-full"/></td>
+                <td><input type="button" value="=" onclick="calculate()" id="calculateBtn" class="bg-gray-400 w-10 h-10 rounded-full"/></td>
+                <td><input type="button" value="C" onclick="clearScreen()" id="clearBtn" class="bg-red-700 w-10 h-10 rounded-full"/></td>
+                <td><input type="button" value="/" onclick="display('/')" class="bg-gray-400 w-10 h-10 rounded-full"/></td>
             </tr>
         </table>
     </div>
+
 
     <script type="text/javascript" src="script.js"></script>
 </body>
