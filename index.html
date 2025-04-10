@@ -9,14 +9,38 @@
 <body class="bg-gray-200">
     <div class="bg-black p-20 w-200">
         <table class="calc">
-            <tr>
-                <td colspan="4"></td>
+            <!-- Calc screen -->
+            <tr class="bg-gray-400">
+                <td colspan="4"><input class="dcalc-screen" type="text" id="result" disabled/></td>
             </tr>
+            <!-- Calc screen -->
             <tr>
-                <td></td>
+                <td>1</td>
+                <td>4</td>
+                <td>7</td>
+                <td>0</td>
             </tr>
-            <tr></tr>
-            <tr></tr>
+            <!-- Calc screen -->
+            <tr>
+                <td>2</td>
+                <td>5</td>
+                <td>8</td>
+                <td>=</td>
+            </tr>
+            <!-- Calc screen -->
+            <tr>                
+                <td>3</td>
+                <td>6</td>
+                <td>9</td>
+                <td><input type="button" value="C" onclick="clearScreen()" id="clearBtn"/></td>
+            </tr>
+            <!-- Calc screen -->
+            <tr>                
+                <td>+</td>
+                <td>-</td>
+                <td>x</td>
+                <td>/</td>
+            </tr>
         </table>
     </div>
 
