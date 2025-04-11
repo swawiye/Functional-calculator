@@ -6,42 +6,37 @@
     <title>Functional Calculator</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-white">
-    <div class="bg-black w-170 m-4 rounded-md px-5 py-30">
-        <table id="calculator" class="p-10 rounded-md w-200 h-64">
+<body class="bg-white flex items-center justify-center p-4">
+    <div class="bg-black mt-10 rounded-md p-6 shadow-2xl w-full max-w-md">
             <!-- Calc screen -->
-            <tr>
-                <td colspan="5"><input class="bg-gray-200 text-black rounded-md w-100 h-20" type="text" id="calc-screen" disabled/></td>
-            </tr>
-            <!-- Calc row 1 ,'display()' function displays the value of clicked button -->
-            <tr>
-                <td><input type="button" value="1" onclick="display('1')" class="bg-orange-300 w-10 h-10 rounded-full"/></td>
-                <td><input type="button" value="2" onclick="display('2')" class="bg-orange-300 w-10 h-10 rounded-full"/></td>
-                <td><input type="button" value="3" onclick="display('3')" class="bg-orange-300 w-10 h-10 rounded-full"/></td> 
-                <td><input type="button" value="+" onclick="display('+')" class="bg-gray-400 w-10 h-10 rounded-full"/></td>
-            </tr>
-            <!-- Calc row 2 -->
-            <tr>
-                <td><input type="button" value="4" onclick="display('4')" class="bg-orange-300 w-10 h-10 rounded-full"/></td>     
-                <td><input type="button" value="5" onclick="display('5')" class="bg-orange-300 w-10 h-10 rounded-full"/></td>
-                <td><input type="button" value="6" onclick="display('6')" class="bg-orange-300 w-10 h-10 rounded-full"/></td>
-                <td><input type="button" value="-" onclick="display('-')" class="bg-gray-400 w-10 h-10 rounded-full"/></td>
-            </tr>
-            <!-- Calc row 3 -->
-            <tr>
-                <td><input type="button" value="7" onclick="display('7')" class="bg-orange-300 w-10 h-10 rounded-full"/></td>
-                <td><input type="button" value="8" onclick="display('8')" class="bg-orange-300 w-10 h-10 rounded-full"/></td>
-                <td><input type="button" value="9" onclick="display('9')" class="bg-orange-300 w-10 h-10 rounded-full"/></td>
-                <td><input type="button" value="*" onclick="display('*')" class="bg-gray-400 w-10 h-10 rounded-full"/></td>  
-            </tr>
-            <!-- Calc row 4 -->
-            <tr>
-                <td><input type="button" value="0" onclick="display('0')" class="bg-orange-300 w-10 h-10 rounded-full"/></td>
-                <td><input type="button" value="=" onclick="calculate()" id="calculateBtn" class="bg-gray-400 w-10 h-10 rounded-full"/></td>
-                <td><input type="button" value="C" onclick="clearScreen()" id="clearBtn" class="bg-red-700 w-10 h-10 rounded-full"/></td>
-                <td><input type="button" value="/" onclick="display('/')" class="bg-gray-400 w-10 h-10 rounded-full"/></td>
-            </tr>
-        </table>
+            <div class="mb-6">
+                <input type="text" id="calc-screen" class="w-full h-16 text-3xl text-right pr-4 bg-gray-200 rounded-md shadow-inner outline-none" readonly placeholder="Enter your values & calculate"/>
+            </div>
+            <div class="grid grid-cols-4 gap-4 text-white text-lg font-semibold">
+                <!-- Row 1 -->
+                <button onclick="display('1')" class="bg-orange-300 hover:bg-orange-400 p-4 rounded-md">1</button>
+                <button onclick="display('2')" class="bg-orange-300 hover:bg-orange-400 p-4 rounded-md">2</button>
+                <button onclick="display('3')" class="bg-orange-300 hover:bg-orange-400 p-4 rounded-md">3</button>
+                <button onclick="display('+')" class="bg-gray-400 hover:bg-gray-600 p-4 rounded-md">+</button>
+
+                <!-- Row 2 -->
+                <button onclick="display('4')" class="bg-orange-300 hover:bg-orange-400 p-4 rounded-md">4</button>
+                <button onclick="display('5')" class="bg-orange-300 hover:bg-orange-400 p-4 rounded-md">5</button>
+                <button onclick="display('6')" class="bg-orange-300 hover:bg-orange-400 p-4 rounded-md">6</button>
+                <button onclick="display('-')" class="bg-gray-400 hover:bg-gray-600 p-4 rounded-md">-</button>
+
+                <!-- Row 3 -->
+                <button onclick="display('7')" class="bg-orange-300 hover:bg-orange-400 p-4 rounded-md">7</button>
+                <button onclick="display('8')" class="bg-orange-300 hover:bg-orange-400 p-4 rounded-md">8</button>
+                <button onclick="display('9')" class="bg-orange-300 hover:bg-orange-400 p-4 rounded-md">9</button>
+                <button onclick="display('*')" class="bg-gray-400 hover:bg-gray-600 p-4 rounded-md">*</button>
+
+                <!-- Row 4 -->
+                <button onclick="display('0')" class="bg-orange-300 hover:bg-orange-400 p-4 rounded-md">0</button>
+                <button onclick="calculate()" class="bg-green-300 hover:bg-green-500 p-4 rounded-md">=</button>
+                <button onclick="clearScreen()" class="bg-red-500 hover:bg-red-700 p-4 rounded-md">C</button>
+                <button onclick="display('/')" class="bg-gray-400 hover:bg-gray-600 p-4 rounded-md">/</button>
+            </div>
     </div>
 
     <script type="text/javascript" src="script.js"></script>
