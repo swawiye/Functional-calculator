@@ -6,6 +6,10 @@ function display(value) {
 //Calculates the result
 function calculate() {
     const screen = document.getElementById("calc-screen");
+    const addBtn = document.getElementById("addBtn");
+    const subBtn = document.getElementById("subBtn");
+    const prodBtn = document.getElementById("prodBtn");
+    const divBtn = document.getElementById("divBtn");
 }
 
 // Clearing the screen
