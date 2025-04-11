@@ -14,5 +14,25 @@ function clearScreen() {
 };
 
 
+//DESTRUCTUTING OBJECTS & ARRAYS
+
+//Destructuring Objects 
+const person = {
+    name: "Marley",
+    gender: "Female",
+    age: 15,
+    hometown: "Mangoni",
+    nationality: "Nepali",
+    hobbies: ["reading, archery, painting"],
+};
+
+const {name, gender, age = 45} = person;
+//const {name, ...rest} = person;
+
+console.log(person.name, person.gender, person.age = 45);
+
+
+//Destructuring Arrays
+
 
 
