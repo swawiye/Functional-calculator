@@ -10,8 +10,9 @@
     <div class="bg-black mt-10 rounded-md p-6 shadow-2xl w-full max-w-md">
             <!-- Calc screen -->
             <div class="mb-6">
-                <input type="text" id="calc-screen" class="w-full h-16 text-3xl text-right pr-4 bg-gray-200 rounded-md shadow-inner outline-none" readonly placeholder="Enter your values & calculate"/>
+                <input type="text" id="calc-screen" class="w-full h-16 text-3xl text-right pr-4 bg-gray-200 rounded-md shadow-inner outline-none" readonly placeholder="Enter your values"/>
             </div>
+            <!-- Calc buttons -->
             <div class="grid grid-cols-4 gap-4 text-white text-lg font-semibold">
                 <!-- Row 1 -->
                 <button onclick="display('1')" class="bg-orange-300 hover:bg-orange-400 p-4 rounded-md">1</button>
@@ -33,9 +34,10 @@
 
                 <!-- Row 4 -->
                 <button onclick="display('0')" class="bg-orange-300 hover:bg-orange-400 p-4 rounded-md">0</button>
-                <button onclick="calculate()" class="bg-green-300 hover:bg-green-500 p-4 rounded-md">=</button>
+                <button onclick="calculate()" class="bg-green-300 hover:bg-green-500 p-4 rounded-md" id="calculate">=</button>
                 <button onclick="clearScreen()" class="bg-red-500 hover:bg-red-700 p-4 rounded-md">C</button>
                 <button onclick="display('/')" class="bg-gray-400 hover:bg-gray-600 p-4 rounded-md">/</button>
+                <button onclick="display('.')" class="bg-gray-400 hover:bg-gray-600 p-4 rounded-md">.</button>
             </div>
     </div>
 
