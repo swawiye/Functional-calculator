@@ -1,6 +1,7 @@
-// Display clicked value
-function display(value) {
-    document.getElementById("calc-screen").value += value;
+// Display clicked value- append the input to the calculator screen
+const display = document.getElementById("calc-screen");
+function appendToDisplay(input) {
+    display.value += input;
 };
 
 //Calculates the result
@@ -10,6 +11,10 @@ function calculate() {
     const subBtn = document.getElementById("subBtn");
     const prodBtn = document.getElementById("prodBtn");
     const divBtn = document.getElementById("divBtn");
+
+    addBtn.addEventListener('click', function () {
+        
+    })
 }
 
 // Clearing the screen
@@ -18,25 +23,8 @@ function clearScreen() {
 };
 
 
-//DESTRUCTUTING OBJECTS & ARRAYS
-
-//Destructuring Objects 
-const person = {
-    name: "Marley",
-    gender: "Female",
-    age: 15,
-    hometown: "Mangoni",
-    nationality: "Nepali",
-    hobbies: ["reading, archery, painting"],
-};
-
-const {name, gender, age = 45} = person;
-//const {name, ...rest} = person;
-
-console.log(person.name, person.gender, person.age = 45);
 
 
-//Destructuring Arrays
 
 
 
