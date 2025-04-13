@@ -1,16 +1,16 @@
-// Append the input to the calculator screen
+// APPEND THE INPUT TO THE CALC SCREEN
 const display = document.getElementById("calc-screen");
 function appendToDisplay(input) {
     display.value += input;
 };
 
-// Clearing the screen
+// CLEARING THE SCREEN
 function clearScreen() {
-    //document.getElementById("calc-screen").value = "";
     display.value = "";
+    //Alternative method: document.getElementById("calc-screen").value = "";
 };
 
-//Calculation
+//CALCULATION
 function calculate() {
     //'expr' is the string on the calc screen (ex: "5 + 10")
     const expr = display.value; 
@@ -50,8 +50,14 @@ function calculate() {
     const operation = operations[operator];
     display.value = operation ? operation(a, b) : "Error";
     */
+};
 
-}
+//TOGGLE THEME
+function modeChanger() {
+    const calculator = document.getElementById("calculator");
+    calculator.classList.toggle("light-mode");
+    calculator.classList.toggle("dark-mode");
+};
 
 
 
