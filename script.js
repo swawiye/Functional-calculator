@@ -38,10 +38,18 @@ function calculate() {
         '*': (x, y) => x * y,
         '/': (x, y) => y !== 0 ? x / y : "Error" //if y is not 0 the operation is completed otherwise it is an error
     };
-    
+
     // If operation exists, then call it with a and b, otherwise set the display to "Error".
     const operation = operations[operator];
+    if (operation) {
+        display.value = operation(a, b);
+    } else {
+        display.value = "Error";
+    };
+    /* Alternative method 
+    const operation = operations[operator];
     display.value = operation ? operation(a, b) : "Error";
+    */
 
 }
 
