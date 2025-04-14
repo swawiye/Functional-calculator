@@ -5,9 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Functional Calculator</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        /* Dark mode */
+        .light-mode {
+            background-color: #f5f5f5;
+            color: #000;
+        }
+
+        /* Light mode */ 
+        .dark-mode {
+            background-color: #1e1e1e;
+            color: #fff;
+        }   
+    </style>
 </head>
-<body class="bg-white flex items-center justify-center p-4">
-    <div class="bg-black mt-10 rounded-md p-6 shadow-2xl w-full max-w-md">
+<body class="bg-orange-100 items-center justify-center p-4">
+    <div>
+        <h1 class="font-bold text-3xl text-center">Calculator</h1>
+        
+        <button onclick="modeChanger()" class="bg-gray-200 p-2 rounded-md text-center cursor-pointer">Change Theme</button>
+    </div>
+    <div class="bg-black mt-10 rounded-md p-6 shadow-2xl w-full max-w-md light-mode" id="calculator">
             <!-- Calc screen -->
             <div class="mb-6">
                 <input type="text" id="calc-screen" class="w-full h-16 text-3xl text-right pr-4 bg-gray-200 rounded-md shadow-inner outline-none" readonly placeholder="Enter your values"/>
